@@ -1,0 +1,28 @@
+projectName: my
+applicationName: front
+appNamespace: applications
+k8sCluster: k8s.localhost
+
+replicas: 1
+accountName: default
+
+front:
+  server:
+    ingressEnabled: true
+    url: front.k8s.localhost
+  logLevel: info
+  resources:
+    requests:
+      memory: '256Mi'
+      cpu: '100m'
+    limits:
+      memory: '1024Mi'
+      cpu: '1'
+
+images:
+  pullSecret: 
+  front:
+    registry: ghcr.io
+    repository: kostakoff
+    imageName: react-application-template
+    imageTag: latest

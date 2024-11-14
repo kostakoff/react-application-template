@@ -1,0 +1,14 @@
+apiVersion: v2
+name: my-front
+appVersion: 1.0.1 #__REPLACEAPPVERSION__
+description: A Helm chart to deploy any java front
+type: application
+version: 1.0.1 #__REPLACEAPPVERSION__
+
+keywords:
+  - front
+
+engine: gotpl
+
+maintainers:
+  - name: kostakoff
