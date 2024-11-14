@@ -34,3 +34,30 @@ docker-compose down
 ```
 
 Local application url: http://localhost:8081
+
+## Deploy to kubernetes
+This deploy will pull follow docker images:
+- application from github: ghcr.io/kostakoff/react-application-template:latest
+
+Deployment:
+- go to deployment folder
+```bash
+cd ./Deployment
+```
+- render helm chart
+```bash
+helm template my-front ./my-front
+```
+- install helm chart
+```bash
+helm install my-front ./my-front
+```
+- update deploy
+```bash
+helm upgrade --install my-front ./my-front
+```
+- remove helm chart
+```bash
+helm uninstall my-front
+```
+Link for microk8s: https://front.k8s.localhost
