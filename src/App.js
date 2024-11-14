@@ -1,11 +1,17 @@
 import React from 'react';
-import "./App.css";
+import Container from '@mui/material/Container';
+import Header from './Header';
+import DataTable from './DataTable';
+
 const App = () => {
-  return (
-    <div>
-      <h1>Hello, React with Webpack!</h1>
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <Container>
+                <DataTable />
+            </Container>
+        </div>
+    );
 };
 
 export default App;

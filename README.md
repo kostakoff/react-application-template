@@ -1,5 +1,10 @@
 # react-application-template
 
+## main components
+- [X] reactjs
+- [X] webpack
+- [X] ui-kit - material
+
 ## ## Manual build
 
 - install dependancies
