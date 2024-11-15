@@ -1,11 +1,12 @@
 # react-application-template
+![UI](/ui.png)
 
-## main components
+## Main components
 - [X] reactjs
 - [X] webpack
 - [X] ui-kit - material
 
-## ## Manual build
+## Manual build
 
 - install dependancies
 ```bash
@@ -61,3 +62,7 @@ helm upgrade --install my-front ./my-front
 helm uninstall my-front
 ```
 Link for microk8s: https://front.k8s.localhost
+
+## GitHub pipeline description
+![Pipeline](./pipeline.jpg)
+
