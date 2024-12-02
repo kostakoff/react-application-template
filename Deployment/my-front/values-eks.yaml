@@ -1,7 +1,7 @@
 projectName: my
 applicationName: front
 appNamespace: applications
-k8sCluster: k8s.localhost
+k8sCluster: dev-k8s.myltd.lab
 
 replicas: 1
 accountName: default
@@ -10,16 +10,16 @@ front:
   server:
     ingress:
       enabled: true
-      class: 
-    url: front.k8s.localhost
+      class: internal-nginx
+    url: front.apps.dev-k8s.myltd.lab
   logLevel: info
   resources:
     requests:
-      memory: '256Mi'
+      memory: '128Mi'
       cpu: '100m'
     limits:
-      memory: '512Mi'
-      cpu: '500m'
+      memory: '256Mi'
+      cpu: '200m'
 
 images:
   pullSecret: 

@@ -1,4 +1,4 @@
-{{- if .Values.front.server.ingressEnabled }}
+{{- if .Values.front.server.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -14,7 +14,7 @@ spec:
   tls:
     - hosts:
         - '{{ tpl .Values.front.server.url . }}'
-  ingressClassName: nginx
+  ingressClassName: '{{ .Values.front.server.ingress.class | default "nginx" }}'
   rules:
     - host: '{{ tpl .Values.front.server.url . }}'
       http:
